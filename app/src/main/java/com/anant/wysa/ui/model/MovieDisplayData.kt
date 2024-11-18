@@ -1,4 +1,4 @@
-package com.anant.wysa.displayData
+package com.anant.wysa.ui.model
 
 import com.anant.wysa.model.MovieListData
 

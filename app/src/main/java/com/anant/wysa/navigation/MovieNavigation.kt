@@ -6,9 +6,9 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.anant.wysa.screen.favorite.FavoritesScreen
-import com.anant.wysa.screen.home.HomeScreen
-import com.anant.wysa.screen.details.MovieDetailsScreen
+import com.anant.wysa.ui.screen.favorite.FavoritesScreen
+import com.anant.wysa.ui.screen.home.HomeScreen
+import com.anant.wysa.ui.screen.details.MovieDetailsScreen
 
 @Composable
 fun MovieNavigation(navController: NavHostController) {

@@ -1,4 +1,4 @@
-package com.anant.wysa.screen.home
+package com.anant.wysa.ui.screen.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -52,16 +52,14 @@ import coil.ImageLoader
 import coil.compose.rememberAsyncImagePainter
 import com.anant.wysa.R
 import com.anant.wysa.application.WysaApplication
-import com.anant.wysa.displayData.MovieDisplayData
+import com.anant.wysa.ui.model.MovieDisplayData
 import com.anant.wysa.factory.viewModelFactory
-import com.anant.wysa.screen.favorite.FavoriteViewModel
-import com.anant.wysa.util.WysaAppBar
+import com.anant.wysa.ui.ext.WysaAppBar
 import kotlinx.coroutines.launch
 
 @Composable
 fun HomeScreen(openDetailScreen: (Int) -> Unit, openFavoriteScreen: () -> Unit) {
     val viewModel: HomeViewModel = viewModel <HomeViewModel>(factory =viewModelFactory { HomeViewModel(WysaApplication.instance.getAppModule().movieRepoImpl) } )
-//    val favoriteViewModel: FavoriteViewModel = viewModel<FavoriteViewModel>()
     var expanded by remember { mutableStateOf(false) }
     val uiState by viewModel.uistate.collectAsStateWithLifecycle()
     val favMovieList by viewModel.favMovieList.collectAsState()

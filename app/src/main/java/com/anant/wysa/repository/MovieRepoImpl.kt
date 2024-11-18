@@ -1,7 +1,7 @@
 package com.anant.wysa.repository
 
 import com.anant.wysa.database.MovieDAO
-import com.anant.wysa.displayData.MovieDisplayData
+import com.anant.wysa.ui.model.MovieDisplayData
 import com.anant.wysa.model.MovieDetailsData
 import com.anant.wysa.model.MovieListData
 
@@ -11,7 +11,8 @@ class MovieRepoImpl(private val movieAPIService: MovieAPIService, private val mo
         movieAPIService.movieList(page = page).results
     }.map {
         it.map {
-            MovieDisplayData(it, isAddedToFav = movieDAO.isMovieExist(it.id))
+            val isAvailable = movieDAO.isMovieExist(it.id)
+            MovieDisplayData(it, isAddedToFav = isAvailable)
         }
     }
 

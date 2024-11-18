@@ -1,4 +1,4 @@
-package com.anant.wysa.screen.details
+package com.anant.wysa.ui.screen.details
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -33,9 +33,8 @@ import coil.compose.rememberAsyncImagePainter
 import com.anant.wysa.application.WysaApplication
 import com.anant.wysa.factory.viewModelFactory
 import com.anant.wysa.model.MovieDetailsData
-import com.anant.wysa.util.WysaAppBar
+import com.anant.wysa.ui.ext.WysaAppBar
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MovieDetailsScreen(movieId: Int,onBackPress:()-> Unit) {
     val viewModel: DetailViewModel = viewModel<DetailViewModel>(factory = viewModelFactory { DetailViewModel(WysaApplication.instance.getAppModule().movieRepoImpl) })

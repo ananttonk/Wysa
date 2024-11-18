@@ -1,6 +1,6 @@
 package com.anant.wysa.repository
 
-import com.anant.wysa.displayData.MovieDisplayData
+import com.anant.wysa.ui.model.MovieDisplayData
 import com.anant.wysa.model.MovieDetailsData
 import com.anant.wysa.model.MovieListData
 import kotlinx.coroutines.flow.Flow

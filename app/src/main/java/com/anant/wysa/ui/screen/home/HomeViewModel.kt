@@ -1,9 +1,9 @@
-package com.anant.wysa.screen.home
+package com.anant.wysa.ui.screen.home
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.anant.wysa.displayData.MovieDisplayData
+import com.anant.wysa.ui.model.MovieDisplayData
 import com.anant.wysa.model.MovieListData
 import com.anant.wysa.repository.MovieRepo
 import kotlinx.coroutines.flow.MutableStateFlow

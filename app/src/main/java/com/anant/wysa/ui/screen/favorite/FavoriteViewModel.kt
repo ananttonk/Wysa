@@ -1,4 +1,4 @@
-package com.anant.wysa.screen.favorite
+package com.anant.wysa.ui.screen.favorite
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

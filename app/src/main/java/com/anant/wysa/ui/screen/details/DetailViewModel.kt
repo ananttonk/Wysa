@@ -1,10 +1,9 @@
-package com.anant.wysa.screen.details
+package com.anant.wysa.ui.screen.details
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.anant.wysa.model.MovieDetailsData
 import com.anant.wysa.repository.MovieRepo
-import com.anant.wysa.repository.MovieRepoImpl
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
